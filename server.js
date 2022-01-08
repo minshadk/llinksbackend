@@ -10,10 +10,11 @@ console.log(process.env.URL)
 mongoose
   .connect(process.env.URL)
   .then(() => console.log("connected to MOngodb"))
-  .catch((err) => console.error("ITs an error from "));
+  .catch((err) => console.error(err));
 
 const port = process.env.PORT || 3002;
 app.listen(port, () => {
   console.log(`App running on port ${3002}`);
 });
-
+   
+   

@@ -1,7 +1,15 @@
-const express = require('express')
+const express = require("express");
 
-const app = express()
+const linkRouter = require("./routes/linkRoutes");
+
+const app = express();
 
 //Middleware
+// used for accessing ?? must have for accesing data from body
+app.use(express.json())
 
-module.exports = app
+//ROUTES
+app.use("/link",linkRouter)
+
+module.exports = app;
+  
