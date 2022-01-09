@@ -8,6 +8,10 @@ router
   .post(linkController.createLink)
   .get(linkController.getAllLinks);
 
-router.route("/:id").get(linkController.getLink);
+router
+  .route("/:id")
+  .get(linkController.getLink)
+  .patch(linkController.updateLink)
+  .delete(linkController.deleteLink);
 
 module.exports = router;
